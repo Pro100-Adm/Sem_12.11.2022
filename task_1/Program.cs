@@ -4,7 +4,8 @@
 double AskUser()
 {
 Console.Write("Введите число: ");
-string Ask = Console.ReadLine();
+string? Ask = Console.ReadLine();
+if (Ask != null){
 try
 {
     double op = double.Parse(Ask);
@@ -14,6 +15,10 @@ catch (Exception)
 {
     Console.WriteLine("Введите верное число!");
     return AskUser();
+}
+}
+else{
+    return 0;
 }
 }
 

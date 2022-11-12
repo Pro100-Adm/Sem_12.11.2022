@@ -4,17 +4,21 @@
 int AskUser()
 {
 Console.Write("Введите число: ");
-string Ask = Console.ReadLine();
+string? Ask = Console.ReadLine();
+if (Ask != null){
 try
 {
-    int num = int.Parse(Ask);
-    //num in [1,2,3,4,5,6,7];
-    return num;
+    int op = int.Parse(Ask);
+    return op;
 }
 catch (Exception)
 {
     Console.WriteLine("Введите верное число!");
     return AskUser();
+}
+}
+else{
+    return 0;
 }
 }
 
