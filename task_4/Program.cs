@@ -18,7 +18,8 @@ catch (Exception)
 }
 }
 else{
-    return 0;
+    Console.WriteLine("Введите верное число!");
+    return AskUser();
 }
 }
 
